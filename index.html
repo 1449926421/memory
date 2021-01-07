@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+<style type="text/css">
+body {
+  font-family: 'Jost', sans-serif;
+  background-color : /*#212121;*/#b7243b;
+}
+menu{
+            width: 100%;
+            height: 80px;
+            /*position: fixed;*/
+            top: 0;
+            left: 130;
+           /* background-color: black;*/
+        }
+        menu ul{
+            float: right;
+            color: black;
+            font-size: 19px;
+            text-align: center;
+        }
+        menu ul li{
+            display: inline-block;
+            width: 250px;
+            height: 60px;
+            line-height: 30px;
+        }
+        menu ul li a{
+            color: pink;
+            font-weight: 900;
+           /* font-family: 'Microsoft YaHel';*/
+            text-decoration: none;          
+        }
+        a:hover{
+            color:white;
+            font-size: 22px;
+            background-color:#bfb4db;
+            border-radius:12px;
+            font-family: '\96b6\4e66';
+        }
+
+h1 {
+  color: red;
+  font-size: 39px;
+  text-align: center;
+}
+h1 {
+  background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, red, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 5vw;
+  font-family: "Source Sans Pro", sans-serif;
+  -webkit-animation: reveal 3s ease-in-out forwards 3s, glow 2s linear infinite 2s;
+  animation: reveal 4s ease-in-out forwards 3s, glow 2s linear infinite 2000ms;
+}
+@-webkit-keyframes reveal {
+  80% {
+    letter-spacing: 8px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+@keyframes reveal {
+  80% {
+    letter-spacing: 8px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+@-webkit-keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
+}
+@keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
+}
+h2,p{
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.image-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.media {
+  width: 30%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.media:hover {
+  cursor: pointer;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+}
+
+.media:hover .overlay {
+  opacity: 1;
+}
+
+img {
+  width: 100%;
+  z-index: -1;
+  margin: auto;
+  transform: scale(1);
+  transition: all ease-in-out 0.5s;
+}
+
+.media:hover img {
+  transform: scale(1.1);
+  filter: blur(2px);
+}
+
+.image-details {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  z-index: 4;
+  position: absolute;
+  top: 100%;
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+}
+
+.media:hover .image-details {
+  top: 40%;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 900px) {
+  .media {
+    width: 70%;
+    height: 70%;
+  }
+}
+</style>
+</head>
+<body>
+  <menu>
+    <ul class="clear">
+                <li>
+                    <a href="首页.html">首页</a>                           
+               </li>
+                <li>
+                    <a href="index.html">Index</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="message.html">Message</a>
+                </li>
+        </ul>
+  <h1>1921→2020｜庆祝中国共产党建党99周年！</h1>
+  <h2>99年前，一个伟大的组织诞生，带领中华民族建立新中国，让人民当家作主。它就是中国共产党！
+  <p>99年里，我们从百废待兴，到成为世界上最大的发展中国家；国民经济快速发展，人民生活日益富足，科学技术不断进步，国际影响力显著增强。你看——</p></h2>
+  <div class="image-wrapper">
+    <div class="media">
+      <div class="overlay"></div>
+      <img src="img/1.png" alt="">
+      <div class="image-details">
+        <p>01 过去衣服种类样式单调颜色单一，今天的服装丰富靓丽</p>
+      </div>
+    </div>
+    <div class="media">
+      <div class="overlay"></div>
+      <img src="img/2.png" alt="">
+      <div class="image-details">
+        <p>02 告别饥肠辘辘，共享国富民丰</p>
+      </div>
+    </div>
+    <div class="media">
+      <div class="overlay"></div>
+      <img src="img/3.png" alt="">
+      <div class="image-details">
+        <p>03 忆往昔旧城的破败，更珍惜今市之朝阳</p>
+      </div>
+    </div>
+    <div class="media">
+      <div class="overlay"></div>
+      <img src="img/4.png" alt="">
+      <div class="image-details">
+        <p>04 还是同一个方向，已是更大的梦想</p>
+      </div>
+    </div>
+    <div class="media">
+      <div class="overlay"></div>
+      <img src="img/5.png" alt="">
+      <div class="image-details">
+        <p>05 中国共产党始于1921，至今已是99周年</p>
+      </div>
+    </div>
+    <div class="media">
+      <div class="overlay"></div>
+      <img src="img/6.png" alt="">
+      <div class="image-details">
+        <p>06 抗争来的岁月静好，由我们继续坚守</p>
+      </div>
+    </div>
+    <div class="media">
+      <div class="overlay"></div>
+      <img src="img/7.png" alt="">
+      <div class="image-details">
+        <p>07 引领冲在最前面的，是那颗永恒的初心</p>
+      </div>
+    </div>
+    <div class="media">
+      <div class="overlay"></div>
+      <img src="img/8.png" alt="">
+      <div class="image-details">
+        <p>08 不同时代不同战役，每场战“役”必取胜利</p>
+      </div>
+    </div>
+    <div class="media">
+      <div class="overlay"></div>
+      <img src="img/9.png" alt="">
+      <div class="image-details">
+        <p>09 一代一代人不断地探索，为的是科学的未来</p>
+      </div>
+    </div>
+  </div>
+  <h2>99年后，
+  <p>在中国共产党领导下，我们正在全面建成小康社会的道路上，向着胜利前行。庆祝中国共产党建党99周年！</p></h2>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';color:#ffffff">
+</div>
+<embed src="music1.mp3" hidden="true"/>
+</body>
+</html>

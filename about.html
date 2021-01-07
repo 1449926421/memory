@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="keywords" content=""/>
+		<meta name="description" content=""/>
+		<title>about</title>
+		<style style="text/css">
+			*{margin:0;padding:0;}
+			menu{
+            width: 100%;
+            height: 80px;
+            top: 0;
+            left: 130;
+           /* background-color: black;*/
+        }
+        menu ul{
+            float: right;
+            color: black;
+            font-size: 19px;
+            text-align: center;
+        }
+        menu ul li{
+            display: inline-block;
+            width: 300px;
+            height: 60px;
+            line-height: 30px;
+        }
+        menu ul li a{
+            color: pink;
+            font-weight: 900;
+           /* font-family: 'Microsoft YaHel';*/
+            text-decoration: none;          
+        }
+        a:hover{
+            color:white;
+            font-size: 22px;
+            background-color:#bfb4db;
+            border-radius:12px;
+            font-family: '\96b6\4e66';
+        }
+			body{background:url("images/11.jpg");
+			    background-size:cover;
+			}
+			.top{width:400px;
+				height:120px;
+				margin:60px auto;
+				font-size:30px;
+				font-family:"华文行楷";
+				color:#fff;
+			<!--background:-webkit-linear-gradient(45deg,#ff0000,#ffcc00,#ffff99,#33ccff,#00ff33,#6600ff,#333399);
+			-webkit-background-clip:text;-->
+		    }
+			.box{width:310px;
+				height:310px;
+				margin:auto;
+				perspective:800px;
+			}
+			.box .pic{position:relative;
+			    transform-style:preserve-3d; 
+			    animation:play 10s linear infinite;
+			}
+			.box ul li{list-style:none;
+				position:absolute;
+				top:0;
+				left:0;
+			}
+			@keyframes play{
+				from{transform:rotateY(0deg);}
+				to{transform:rotateY(360deg);}
+			}
+			
+			#text{width:500px;
+				height:200px;
+				color:#aa77f6;
+				margin:auto;
+				font-size:24px;
+				font-family:"方正粗黑宋简体";
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="top">
+			<marquee behavior="alternate">HTML与CSS3之旅</marquee>
+		</div> 
+		
+		<menu>
+    <ul class="clear">
+                <li>
+                    <a href="首页.html">首页</a>                           
+               </li>
+                <li>
+                    <a href="index.html">Index</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="message.html">Message</a>
+                </li>
+        </ul>
+		
+		<div class="box">
+			<div class="pic">
+				<ul>
+					<li><img src="images/1.png" width="" height="" alt=""/></li>
+					<li><img src="images/2.png" width="" height="" alt=""/></li>
+					<li><img src="images/3.png" width="" height="" alt=""/></li>
+					<li><img src="images/4.png" width="" height="" alt=""/></li>
+					<li><img src="images/5.png" width="" height="" alt=""/></li>
+					<li><img src="images/6.png" width="" height="" alt=""/></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="text"></div>
+		<embed src="music.mp3" hidden="true"/>
+		
+		<script src="js/jquery.min.js"></script>
+		<!--雪花-->
+		<script src="js/snow.js"></script>
+		<script>
+			$(".pic ul li").each(function(i){
+				var deg=360/$(".pic ul li").size();
+				
+				$(this).css({"transform":"rotateY("+deg*i+"deg) translateZ(216px)"});
+				
+				$.fn.snow({
+					minSize:10,
+					maxSize:15,
+					newOn:500,
+					flakeColor:"#ffffff"
+				});
+			});
+			
+			var i=0;
+			var str="作品心得：99年前，一个伟大的组织诞生，带领中华民族建立新中国，让人民当家作主。它就是中国共产党！在完成基础的要求上，背景图为红色，寓意着中国共产党带领着中华儿女从战乱纷纷的旧中国走到繁荣富强的新中国的血与火的历程，其中不乏泱泱中华儿女的满腔热血与爱国情！标题运用了动画，展示了“庆祝中国共产党建党99周年”的主题，下面选用了9张自建党以来我们国家各个方面变化的图片，运用转换与过渡的方式，产生了遮罩的效果，并配有相关文字说明，使得整体有动感；背景音乐为“永远跟党走”，使得页面更为生动。课程心得：CSS3新增加了许多特征，例如透明效果、渐变效果、文字阴影、动画、过渡、多栏布局等功能，对网页进行了改进与美观，提高了页面的性能。通过学习CSS3受益颇深，很多以前看不懂的代码都豁然开朗，不管是字体规则，还是动画规则，CSS3都增加了很多美丽的属性！"
+			window.onload=function typing(){
+				
+				var mydiv=document.getElementById("text");
+				mydiv.innerHTML+=str.charAt(i);
+				i++;
+				var id=setTimeout(typing,100);
+				if(i==str.length){
+					clearTimeout(id);
+				}
+			}
+		</script>
+	</body>
+</html>
